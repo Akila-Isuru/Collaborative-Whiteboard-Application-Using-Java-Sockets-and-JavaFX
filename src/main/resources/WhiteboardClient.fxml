@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Canvas?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:controller="org.example.whiteboard."
+      spacing="10"
+      padding="10"
+      xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/21">
+
+    <Label fx:id="statusLabel" text="සම්බන්ධ නැත"/>
+
+    <HBox spacing="10">
+        <Label text="නම:"/>
+        <TextField fx:id="usernameField" promptText="ඔබේ නම ඇතුළත් කරන්න" prefWidth="100"/>
+
+        <Label text="වර්ණය:"/>
+        <ColorPicker fx:id="colorPicker"/>
+
+        <Label text="ප්‍රමාණය:"/>
+        <Slider fx:id="sizeSlider" min="1" max="20" showTickLabels="true" showTickMarks="true" prefWidth="150"/>
+
+        <Button text="පිරිසිදු කරන්න" onAction="#handleClearButton"/>
+    </HBox>
+
+    <Canvas fx:id="canvas" width="600" height="400"/>
+
+</VBox>
